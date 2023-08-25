@@ -1,9 +1,9 @@
 <h2 align="center">
-    ──「 Alone xD Music 」──
+    ──「 Lofi Music 」──
 </h2>
 
 <p align="center">
-  <img src="https://telegra.ph/file/56d1760224589ee370186.jpg">
+  <img src="https://telegra.ph/file/2e947001d97ad47603871.jpg">
 </p>
 
 <p align="center">
