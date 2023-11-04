@@ -8,7 +8,7 @@ from ..logging import LOGGER
 
 class Anony(Client):
     def __init__(self):
-        LOGGER(__name__).info(f"Starting Bot...")
+        LOGGER(__name__).info(f"𝑆𝑡𝑎𝑟𝑡𝑖𝑛𝑔 𝐵𝑜𝑡...")
         super().__init__(
             name="Sugar_Mmy",
             api_id=config.API_ID,
