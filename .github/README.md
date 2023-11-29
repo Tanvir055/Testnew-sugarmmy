@@ -8,10 +8,10 @@
 
 <p align="center">
 <a href="https://github.com/Tanvir055/LOFI-MUSIC/stargazers"><img src="https://img.shields.io/github/stars/sanju9636/LOFI-MUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/sanju9636/LOFI-MUSIC/network/members"> <img src="https://img.shields.io/github/forks/sanju9636/LOFI-MUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/sanju9636/LOFI-MUSIC/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://github.com/Tanvir055/LOFI-MUSIC/network/members"> <img src="https://img.shields.io/github/forks/sanju9636/LOFI-MUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/Tanvir055/LOFI-MUSIC/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
-<a href="https://github.com/sanju9636/LOFI-MUSIC/commits/NeeJjeeaspirants07"> <img src="https://img.shields.io/github/last-commit/sanju9636/LOFI-MUSIC?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+<a href="https://github.com/Tanvir055/LOFI-MUSIC/commits/NeeJjeeaspirants07"> <img src="https://img.shields.io/github/last-commit/sanju9636/LOFI-MUSIC?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
 </p>
 
 <p align="center">
