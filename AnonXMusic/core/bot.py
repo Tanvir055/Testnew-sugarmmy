@@ -45,7 +45,7 @@ class Anony(Client):
         a = await self.get_chat_member(config.LOGGER_ID, self.id)
         if a.status != ChatMemberStatus.ADMINISTRATOR:
             LOGGER(__name__).error(
-                "𝙋𝙡𝙚𝙖𝙨𝙚 𝙥𝙧𝙤𝙢𝙤𝙩𝙚 𝙮𝙤𝙪𝙧 𝙗𝙤𝙩 𝙖𝙨 𝙖𝙣 𝙖𝙙𝙢𝙞𝙣 𝙞𝙣 𝙮𝙤𝙪𝙧 𝙡𝙤𝙜 𝙜𝙧𝙤𝙪𝙥/𝙘𝙝𝙖𝙣𝙣𝙚𝙡."
+                "Please promote your bot as an admin in your log group/channel."
             )
             exit()
         LOGGER(__name__).info(f"𝑀𝑢𝑠𝑖𝑐 𝐵𝑜𝑡 𝑆𝑡𝑎𝑟𝑡𝑒𝑑 as {self.name}")
