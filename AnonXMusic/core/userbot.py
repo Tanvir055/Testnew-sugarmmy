@@ -73,7 +73,7 @@ class Userbot(Client):
             await self.two.start()
             try:
                 await self.two.join_chat("ak_joot_bondhuu")
-                await self.one.join_chat("feelingspeace")
+                await self.two.join_chat("feelingspeace")
             except:
                 pass
             assistants.append(2)
@@ -94,7 +94,7 @@ class Userbot(Client):
             await self.three.start()
             try:
                 await self.three.join_chat("ak_joot_bondhuu")
-                await self.one.join_chat("feelingspeace")
+                await self.three.join_chat("feelingspeace")
             except:
                 pass
             assistants.append(3)
@@ -115,7 +115,7 @@ class Userbot(Client):
             await self.four.start()
             try:
                 await self.four.join_chat("ak_joot_bondhuu")
-                await self.one.join_chat("feelingspeace")
+                await self.four.join_chat("feelingspeace")
             except:
                 pass
             assistants.append(4)
@@ -136,7 +136,7 @@ class Userbot(Client):
             await self.five.start()
             try:
                 await self.five.join_chat("ak_joot_bondhuu")
-                await self.one.join_chat("feelingspeace")
+                await self.five.join_chat("feelingspeace")
             except:
                 pass
             assistants.append(5)
