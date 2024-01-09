@@ -87,7 +87,13 @@ async def restartbot(client, message: Message, _):
 
 
 @app.on_callback_query(filters.regex("close") & ~BANNED_USERS)
-async def close_menu(_, Query: CallbackQuery)
+async def close_menu: 
+    try: 
+        await Query.answer() 
+        await Query.message.delete() 
+        umm=  await Query.message.reply_text( 
+            f"Cʟᴏsᴇᴅ ʙʏ : {Query.from_user.mention}" 
+        )(_, Query: CallbackQuery)
         await asyncio.sleep(7)
         await umm.delete()
     except: 
