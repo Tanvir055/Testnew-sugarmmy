@@ -4,7 +4,7 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.enums import ChatType
 
-from AnonXMusic import pbot
+
 from FallenRobot.utils.mongo import get_couple, save_couple
 
 
