@@ -37,7 +37,7 @@ UPSTREAM_REPO = getenv(
     
     "https://github.com/Tanvi555/Telethon-Music",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
