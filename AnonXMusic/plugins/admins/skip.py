@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from AnonXMusic import YouTube, app
+from AnonXMusic import YouTube, app, YTB
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import db
 from AnonXMusic.utils.database import get_loop
@@ -138,7 +138,15 @@ async def skip(cli, message: Message, _, chat_id):
                 video=status,
             )
         except:
-            return await mystic.edit_text(_["call_6"])
+            try:
+                file_path, direct = await YTB.download(
+                    videoid,
+                    mystic,
+                    videoid=True,
+                    video=status,
+                )
+            except:
+                return await mystic.edit_text(_["call_6"])
         try:
             image = await YouTube.thumbnail(videoid, True)
         except:
