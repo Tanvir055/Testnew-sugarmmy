@@ -14,7 +14,7 @@ from AnonXMusic.utils.inline import aq_markup, close_markup, stream_markup
 from AnonXMusic.utils.pastebin import AnonyBin
 from AnonXMusic.utils.stream.queue import put_queue, put_queue_index
 from AnonXMusic.utils.thumbnails import get_thumb
-
+from youtubesearchpython.__future__ import VideosSearch
 
 async def stream(
     _,
@@ -78,8 +78,13 @@ async def stream(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
-                    raise AssistantErr(_["play_14"])
-                await Anony.join_call(
+                    try:
+                        file_path, direct = await YTB.download(
+                            vidid, mystic, video=status, videoid=True
+                        )
+                    except:
+                        await mystic.edit_text(_["play_3"])
+                await Hotty.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
@@ -99,7 +104,7 @@ async def stream(
                     forceplay=forceplay,
                 )
                 img = await get_thumb(vidid)
-                button = stream_markup(_, chat_id)
+                button = stream_markup(_, vidid, chat_id)
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
@@ -142,7 +147,12 @@ async def stream(
                 vidid, mystic, videoid=True, video=status
             )
         except:
-            raise AssistantErr(_["play_14"])
+            try:
+                file_path, direct = await YTB.download(
+                    vidid, mystic, videoid=True, video=status
+                )
+            except:
+                await mystic.edit_text(_["play_3"])
         if await is_active_chat(chat_id):
             await put_queue(
                 chat_id,
@@ -185,7 +195,7 @@ async def stream(
                 forceplay=forceplay,
             )
             img = await get_thumb(vidid)
-            button = stream_markup(_, chat_id)
+            button = stream_markup(_, vidid, chat_id)
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
@@ -418,3 +428,28 @@ async def stream(
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
             await mystic.delete()
+
+
+# Function to get thumbnail by video ID
+async def get_thumb(videoid):
+    try:
+        # Search for the video using video ID
+        query = f"https://www.youtube.com/watch?v={videoid}"
+        results = VideosSearch(query, limit=1)
+        for result in (await results.next())["result"]:
+            thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+        return thumbnail
+    except Exception as e:
+        return config.YOUTUBE_IMG_URL
+
+
+async def get_thumb(vidid):
+    try:
+        # Search for the video using video ID
+        query = f"https://www.youtube.com/watch?v={vidid}"
+        results = VideosSearch(query, limit=1)
+        for result in (await results.next())["result"]:
+            thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+        return thumbnail
+    except Exception as e:
+        return config.YOUTUBE_IMG_URL
