@@ -84,7 +84,7 @@ async def stream(
                         )
                     except:
                         await mystic.edit_text(_["play_3"])
-                await Hotty.join_call(
+                await Anony.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
